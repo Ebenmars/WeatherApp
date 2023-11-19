@@ -9,6 +9,7 @@ public class Launcher {
             public void run() {
                 AppGui app = new AppGui();
                 app.setVisible(true);
+
             }
         });
 
