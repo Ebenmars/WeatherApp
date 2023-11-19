@@ -13,7 +13,7 @@ public class AppGui extends JFrame {
 
        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-       setSize(500,500);
+       setSize(500,650);
 
        setLocationRelativeTo(null);
 
@@ -45,7 +45,40 @@ public class AppGui extends JFrame {
         this.add(searchButton);
 
 
-        JLabel weatherConditionImage = new JLabel();
+        JLabel weatherConditionImage = new JLabel(loadImage("/Users/ignite/WeatherApp/src/assets/cloudy.png"));
+        weatherConditionImage.setBounds(50,150,400,200);
+        this.add(weatherConditionImage);
+
+
+        JLabel temperatureInfo = new JLabel("70 F");
+        temperatureInfo.setBounds(50,125,400,50);
+        temperatureInfo.setFont(new Font("SANS_SERIF",Font.BOLD,46));
+        this.add(temperatureInfo);
+
+        JLabel weatherConditions = new JLabel("Cloudy");
+        weatherConditions.setBounds(50,340,400,50);
+        weatherConditions.setFont(new Font("SANS_SERIF",Font.BOLD,32));
+        weatherConditions.setHorizontalAlignment(SwingConstants.CENTER);
+        this.add(weatherConditions);
+
+
+        JLabel humidity = new JLabel(loadImage("/Users/ignite/WeatherApp/src/assets/humidity.png"));
+        humidity.setBounds(20,500,78,64);
+        this.add(humidity);
+
+        JLabel humidityText = new JLabel("<html><b>Humidity</b> 100%</html>");
+        humidityText.setBounds(90,485,125,75);
+        humidityText.setFont(new Font("SANS",Font.PLAIN,17));
+        this.add(humidityText);
+
+        JLabel wind = new JLabel(loadImage("/Users/ignite/WeatherApp/src/assets/windy.png"));
+        wind.setBounds(275,500,78,64);
+        this.add(wind);
+
+        JLabel windText = new JLabel("<html><b>Wind speed</b> 15m</html>");
+        windText.setBounds(365,485,125,75);
+        windText.setFont(new Font("SANS",Font.PLAIN,17));
+        this.add(windText);
     }
 
     private ImageIcon loadImage(String path) {
